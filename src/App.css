@@ -1,0 +1,43 @@
+.App {  
+  text-align: center;
+}
+#card {
+  perspective: 800px;
+  perspective-origin: center;  
+}
+.card {
+  perspective: 800px;
+  perspective-origin: center;
+  transition: transform 1s ease-in-out;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #card {
+    width: 100vw;
+    height: 100vh;
+  }
+  .card {
+    transform: translateZ(-200px);
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #card {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 75.8vh;
+    height: 80vh; 
+    margin: 0 auto;
+    transform: translateX(0%);
+  }
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 37.9vh;
+    height: 80vh;
+  }
+}

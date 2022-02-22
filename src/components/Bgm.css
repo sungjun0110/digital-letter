@@ -1,0 +1,83 @@
+#bgm {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  opacity: 1;
+}
+#bgm::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 17px;
+  border-bottom: 8px solid white;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-top: 8px solid transparent;
+  transform: scale(1);
+  opacity: 1;
+  animation: 10s infinite wave, 12s forwards disappear;
+}
+@keyframes disappear {
+  0% {opacity: 1}
+  95% {opacity: 1}
+  to {opacity: 0}
+}
+#bgm::after {
+  content: "Press to Play BGM";
+  text-align: center;
+  position: absolute;
+  width: 180px;
+  padding: 6px;
+  bottom: -35px;
+  right: 8px;
+  background-color: white;
+  border-radius: 8px;
+  color: black;
+  transform: translateY(0px);
+  animation: 10s infinite wave, 12s forwards disappear;
+}
+@keyframes wave {
+  0% { transform: translateY(-8px) }
+  25% { transform: translateY(8px) }
+  50% { transform: translateY(-8px) }
+  75% { transform: translateY(8px) }
+  100% { transform: translateY(-8px) }
+}
+#bgmBtn {
+  background: none;
+  padding: 10px;
+  border: none;
+}
+.bgmBtnDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.note {
+  display: block;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #bgm {
+    position: absolute;
+    top: 0px;
+    right: 0; 
+    opacity: 1;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #bgm {
+    position: absolute;
+    top: 0px;
+    right: -50px;
+    opacity: 1;
+  }
+  #bgm::after {
+    left: 0px;
+
+  }
+}

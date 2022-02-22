@@ -1,0 +1,15 @@
+#numCounter {
+  color: black;
+  font-size: 4rem;
+  animation: 2s forwards number;
+  font-family: 'Zen Loop', cursive;
+  z-index: 4;
+}
+@keyframes number {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

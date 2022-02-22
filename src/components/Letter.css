@@ -1,0 +1,104 @@
+#letterContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/flowerFrame.png);
+  background-color: rgb(255, 229, 229);
+  background-size: cover;
+  transform: translateZ(0px);
+}
+#letterContent {
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.letter {
+  font-family: 'Nanum Brush Script', cursive;
+}
+.letter p {
+  text-align: center;
+}
+#image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Nanum Brush Script', cursive;
+}
+.imgFrame {
+  position: absolute;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+.finale {
+  font-family: 'Nanum Brush Script', cursive;
+  animation: 0.5s forwards finale;
+  text-align: center;
+}
+@keyframes finale {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.littleHeart {
+  color: rgb(224, 0, 0);
+  transform: scale(1);
+  animation: pulse infinite 2s;
+  margin-left: .5rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #letterContainer {
+    width: 100vw;
+    height: 100vh;
+  }
+  #letterContent {
+    padding-left: 43px;
+    padding-right: 47px;
+  }
+  .letter {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+  #image {
+    font-size: 1.5rem;
+  }
+  #image img {
+    width: 270px;
+  }
+  .finale {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #letterContainer {
+    width: 37.9vh;
+    height: 80vh;
+  }
+  #letterContent {
+    padding-left: 4.1vh;
+    padding-right: 5vh;
+  }
+  .letter {
+    font-size: 2rem;
+    line-height: 4rem;
+    font-family: 'Nanum Brush Script', cursive;
+  }
+  #image {
+    font-size: 2rem;
+  }
+  #image img {
+    width: 28vh;
+  }
+  .finale {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
